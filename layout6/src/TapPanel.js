@@ -48,8 +48,6 @@ class App extends Component {
           {messageJson.map(item => (
             <li key={item.message}>
               <Layout
-                leftStyle={this.state.leftStyle}
-                rightStyle={this.state.rightStyle}
                 LRender={this.LRender}
                 helpMessage={item.message}
               />

@@ -1,18 +1,7 @@
 import React, { Component } from 'react'
 
-class Layout extends Component {
-  constructor(props, context) {
-    super(props, context)
-
-    this.Btnclick = this.Btnclick.bind(this)
-    this.state = {
-      rightStyle: props.rightStyle,
-      leftStyle: props.leftStyle,
-      helpMessage: props.helpMessage
-    }
-  }
-
-  Btnclick(e) {
+const Layout = ({ LRender, helpMessage }) => {
+  const Btnclick = e => {
     e.preventDefault()
     const rightStyle = {
       transform: 'translate3d(-100%,0,0)',
@@ -22,18 +11,14 @@ class Layout extends Component {
       width: '70%',
       transition: 'all 0.5s'
     }
-    this.props.LRender(leftStyle, rightStyle, this.state.helpMessage)
+    LRender(leftStyle, rightStyle, helpMessage)
   }
-
-  render() {
-    return (
+  return (
+    <div>
       <div>
-        <div>
-          <button onClick={this.Btnclick}>帮助信息</button>
-        </div>
+        <button onClick={Btnclick}>帮助信息</button>
       </div>
-    )
-  }
+    </div>
+  )
 }
-
 export default Layout
