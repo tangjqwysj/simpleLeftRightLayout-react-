@@ -35,7 +35,7 @@ class App extends Component {
         <ul style={this.state.leftStyle}>
           {
             messageJson.map(item => (
-            <li>
+            <li key={item.message}>
               <Layout leftStyle={this.leftStyle} LRender={this.LRender} helpMessage={item.message} />
               <p>{item.info}</p>
             </li>
