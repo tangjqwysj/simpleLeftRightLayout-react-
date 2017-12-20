@@ -56,7 +56,9 @@ class App extends Component {
   render() {
     const container = {
       width: '100%',
+      paddingBottom: '100%',
       position:'relative',
+      overflow: 'hidden'
     }
     return (
       <div style={container}>
