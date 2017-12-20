@@ -20,5 +20,4 @@ const RightBlock = ({ rightStyle, sRender }) => {
     </div>
   )
 }
-
 export default RightBlock
