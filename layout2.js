@@ -37,14 +37,14 @@ class App extends Component {
     }
     const leftStyle = {
       width: '70%',
-      transition: 'all 0.5s 0.2s'
+      transition: 'all 0.5s'
     }
     this.sRender(rightStyle, leftStyle)
   }
   CBtnclick() {
     const rightStyle = {
-      transform: 'translate3d(100%,0,0)',
-      transition: 'all 0.5s 0.2s'
+      transform: 'translate3d(0,0,0)',
+      transition: 'all 0.5s'
     }
     const leftStyle= {
       width: '100%',
