@@ -24,6 +24,12 @@ class App extends Component {
       leftStyle: leftStyle
     }
   }
+  sRender(rightStyle, leftStyle){
+    this.setState((prevState)=>({
+      rightStyle: {...prevState.rightStyle,...rightStyle},
+      leftStyle: {...prevState.leftStyle,...leftStyle}
+    }))
+  }
   Btnclick() {
     const rightStyle = {
       transform: 'translate3d(-100%,0,0)',
@@ -33,10 +39,7 @@ class App extends Component {
       width: '70%',
       transition: 'all 0.5s 0.2s'
     }
-    this.setState((prevState)=>({
-      rightStyle: {...prevState.rightStyle,...rightStyle},
-      leftStyle: {...prevState.leftStyle,...leftStyle}
-    }))
+    this.sRender(rightStyle, leftStyle)
   }
   CBtnclick() {
     const rightStyle = {
@@ -47,10 +50,7 @@ class App extends Component {
       width: '100%',
       transition: 'all 0.5s'
     }
-    this.setState((prevState)=>({
-      rightStyle: {...prevState.rightStyle,...rightStyle},
-      leftStyle: {...prevState.leftStyle,...leftStyle}
-    }))
+    this.sRender(rightStyle, leftStyle)
   }
   
   render() {
