@@ -39,12 +39,13 @@ class Layout extends Component {
   }
   
   render() {
+    const {leftStyle, ...otherProps} = this.props
     return (
       <div>
         <div>
           <button onClick={this.Btnclick}>帮助信息</button>
         </div>
-        <RightBlock rightStyle={this.state.rightStyle} RRender={this.RRender} LRender={this.props.LRender}></RightBlock>
+        <RightBlock rightStyle={this.state.rightStyle} RRender={this.RRender} {...otherProps}></RightBlock>
       </div>
     );
   }

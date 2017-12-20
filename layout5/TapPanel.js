@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Layout from './layout4'
+import {messageJson} from './json'
 
 const leftStyle = {
   width: '100%',
@@ -12,6 +13,7 @@ class App extends Component {
   constructor(props, context) {
     super(props, context)
     this.LRender = this.LRender.bind(this)
+    
     this.state = {
       leftStyle: leftStyle
     }
@@ -31,10 +33,14 @@ class App extends Component {
     return (
       <div style={container}>
         <ul style={this.state.leftStyle}>
-          <li>
-            <Layout leftStyle={this.leftStyle} LRender={this.LRender} />
-            <p>急口令艰苦飞机昆仑山分阶段考虑警方当时看来飞机迪斯科龙卷风迪斯科解放饭都十分都十分都十分大方都十分饭都十分大方地方都十分都十分大方放松放松的粉色呃呃呃恶霸vb</p>
-          </li>
+          {
+            messageJson.map(item => (
+            <li>
+              <Layout leftStyle={this.leftStyle} LRender={this.LRender} helpMessage={item.message} />
+              <p>{item.info}</p>
+            </li>
+          ))
+          }
         </ul>
       </div>
     )

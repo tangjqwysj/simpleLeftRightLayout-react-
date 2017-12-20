@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RightBlock = ({ rightStyle, RRender, LRender }) => {
+const RightBlock = ({ rightStyle, RRender, LRender, helpMessage }) => {
   const CBtnclick = e => {
     e.preventDefault()
     const rightStyle = {
@@ -17,7 +17,7 @@ const RightBlock = ({ rightStyle, RRender, LRender }) => {
   return (
     <div style={rightStyle}>
       <button onClick={CBtnclick}>关闭</button>
-      <div>电风扇地方第三方的房贷首付电风扇地方都十分大方</div>
+      <div>{helpMessage}</div>
     </div>
   )
 }
